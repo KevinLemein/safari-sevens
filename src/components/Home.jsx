@@ -54,11 +54,20 @@ const Home = () => {
 
     return (
         <div className="min-h-screen relative bg-cover bg-center bg-no-repeat"
+             // style={{
+             //     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${backgroundImage})`
+             // }}>
+
              style={{
-                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${backgroundImage})`
+                 backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(${backgroundImage})`,
+                 backgroundSize: "cover",
+                 backgroundRepeat: "no-repeat",
+                 backgroundPosition: "center",
+                 imageRendering: "crisp-edges", // try "pixelated" too
              }}>
 
-            <main className="relative min-h-screen">
+
+        <main className="relative min-h-screen">
 
                 <div className="absolute bottom-0 w-full lg:static">
                     {/* Black Trapezoid/Block */}
@@ -68,7 +77,7 @@ const Home = () => {
                         style={isDesktop ? { clipPath: 'polygon(0 0, 100% 0, 75% 100%, 0% 100%)' } : {}}
                     >
                         <h1 className="text-red-500 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight">
-                            Safari Sevens <br/> Tournament
+                            Kenya Safari 7s
                         </h1>
                         <p className="text-white text-base sm:text-lg lg:text-xl mb-6 opacity-90">
                             10th - 12th October 2025 • Nyayo Stadium

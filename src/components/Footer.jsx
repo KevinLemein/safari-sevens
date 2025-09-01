@@ -1,87 +1,126 @@
 import React from 'react';
-import { Instagram, Facebook, Linkedin, Twitter } from 'lucide-react';
+import { Instagram, Facebook, Linkedin } from 'lucide-react';
+
+const XIcon = () => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className="w-6 h-6 text-black"
+    >
+        <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+    </svg>
+);
 
 const Footer = () => {
     return (
-        <footer className="bg-black text-white">
-            {/* Main Footer */}
-            <div className="grid md:grid-cols-3 gap-0">
-                {/* Logo Section */}
-                <div className="bg-black p-8 flex flex-col items-center justify-center">
-                    <div className="mb-6">
-                        <div className="flex items-center space-x-2 mb-4">
-                            <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center">
-                                <span className="text-white font-bold text-xl">S7</span>
-                            </div>
+        <footer className="bg-white">
+            {/* Sponsors Section */}
+            <div className="bg-white py-8">
+                <div className="max-w-6xl mx-auto px-4">
+                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 items-center justify-items-center">
+                        {/* Replace these divs with your actual imported images */}
+                        <div className="h-16 flex items-center justify-center">
+                            {/* <img src={kenyaRugbyUnionLogo} alt="Kenya Rugby Union" className="h-12 object-contain" /> */}
+                            <div className="text-black font-bold text-sm">Kenya Rugby Union</div>
                         </div>
-                        <div className="text-center">
-                            <div className="text-red-500 text-2xl font-bold">SAFARI</div>
-                            <div className="text-white text-2xl font-bold">SEVENS</div>
-                            <div className="text-white text-lg">KENYA</div>
+                        <div className="h-16 flex items-center justify-center">
+                            {/* <img src={ministryLogo} alt="Ministry of Youth Affairs and Sports" className="h-12 object-contain" /> */}
+                            <div className="text-black font-bold text-sm text-center">Ministry of Youth Affairs</div>
                         </div>
-                    </div>
-
-                    <div className="flex space-x-4">
-                        <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
-                            <Instagram className="w-5 h-5 text-black" />
-                        </a>
-                        <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
-                            <Facebook className="w-5 h-5 text-black" />
-                        </a>
-                        <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
-                            <Linkedin className="w-5 h-5 text-black" />
-                        </a>
-                        <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
-                            <Twitter className="w-5 h-5 text-black" />
-                        </a>
-                    </div>
-                </div>
-
-                {/* Links Section */}
-                <div className="bg-red-600 p-8">
-                    <div className="grid grid-cols-2 gap-8">
-                        <div>
-                            <ul className="space-y-3">
-                                <li><a href="#" className="hover:text-red-200 transition-colors">Home</a></li>
-                                <li><a href="#" className="hover:text-red-200 transition-colors">Calender</a></li>
-                                <li><a href="#" className="hover:text-red-200 transition-colors">About us</a></li>
-                                <li><a href="#" className="hover:text-red-200 transition-colors">News</a></li>
-                                <li><a href="#" className="hover:text-red-200 transition-colors">Events</a></li>
-                                <li><a href="#" className="hover:text-red-200 transition-colors">Join us</a></li>
-                                <li><a href="#" className="hover:text-red-200 transition-colors">Buy tickets</a></li>
-                            </ul>
+                        <div className="h-16 flex items-center justify-center">
+                            {/* <img src={yalantaLogo} alt="Yalanta HELA" className="h-12 object-contain" /> */}
+                            <div className="text-black font-bold text-sm">Yalanta HELA</div>
                         </div>
-                        <div>
-                            <ul className="space-y-3">
-                                <li><a href="#" className="hover:text-red-200 transition-colors">Terms & conditions</a></li>
-                                <li><a href="#" className="hover:text-red-200 transition-colors">Payment policy</a></li>
-                                <li><a href="#" className="hover:text-red-200 transition-colors">FAQ</a></li>
-                            </ul>
+                        <div className="h-16 flex items-center justify-center">
+                            {/* <img src={umbroLogo} alt="Umbro" className="h-12 object-contain" /> */}
+                            <div className="text-black font-bold text-sm">umbro</div>
                         </div>
-                    </div>
-                </div>
-
-                {/* Contact Section */}
-                <div className="bg-green-600 p-8">
-                    <div className="mb-6">
-                        <h4 className="font-semibold mb-2">Mombasa, Kenya</h4>
-                        <p className="mb-2">+254727991993</p>
-                        <p>+254704069264</p>
+                        <div className="h-16 flex items-center justify-center">
+                            {/* <img src={sportPesaLogo} alt="SportPesa" className="h-12 object-contain" /> */}
+                            <div className="text-black font-bold text-sm">SportPesa</div>
+                        </div>
+                        <div className="h-16 flex items-center justify-center">
+                            {/* <img src={blockSportLogo} alt="BLOCKSPORT" className="h-12 object-contain" /> */}
+                            <div className="text-black font-bold text-sm">BLOCKSPORT</div>
+                        </div>
+                        <div className="h-16 flex items-center justify-center">
+                            {/* <img src={tikoHubLogo} alt="TikoHUB" className="h-12 object-contain" /> */}
+                            <div className="text-black font-bold text-sm">TikoHUB</div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            {/* Sponsors Header */}
-            <div className="bg-white py-6">
-                <div className="max-w-6xl mx-auto px-4">
-                    <div className="flex flex-wrap items-center justify-center space-x-8 space-y-4">
-                        <div className="text-black font-bold">Kenya Rugby Union</div>
-                        <div className="text-black font-bold">Ministry of Youth Affairs and Sports</div>
-                        <div className="text-black font-bold">Yalanta HELA</div>
-                        <div className="text-black font-bold">umbro</div>
-                        <div className="text-black font-bold">SportPesa</div>
-                        <div className="text-black font-bold">BLOCKSPORT</div>
-                        <div className="text-black font-bold">TikoHUB</div>
+            {/* Main Footer */}
+            <div className="grid md:grid-cols-3 gap-0 relative">
+                {/* Logo Section - Black */}
+                <div className="bg-black p-8 flex flex-col items-center justify-center min-h-[400px]">
+                    <div className="mb-8">
+                        <div className="flex items-center justify-center mb-6">
+                            <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center">
+                                <span className="text-white font-bold text-2xl">S7</span>
+                            </div>
+                        </div>
+                        <div className="text-center">
+                            <div className="text-red-500 text-3xl font-bold tracking-wide">SAFARI</div>
+                            <div className="text-white text-3xl font-bold tracking-wide">SEVENS</div>
+                            <div className="text-white text-xl mt-1">KENYA</div>
+                        </div>
+                    </div>
+
+                    <div className="flex space-x-4">
+                        <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
+                            <Instagram className="w-6 h-6 text-black" />
+                        </a>
+                        <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
+                            <Facebook className="w-6 h-6 text-black" />
+                        </a>
+                        <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
+                            <Linkedin className="w-6 h-6 text-black" />
+                        </a>
+                        <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-300 transition-colors transform hover:scale-110">
+                            <XIcon />
+                        </a>
+                    </div>
+                </div>
+
+                {/* Links Section - Red */}
+                <div className="bg-red-600 p-8 text-white min-h-[400px] relative">
+                    <div className="grid grid-cols-2 gap-8 mb-16">
+                        <div className="flex flex-col space-y-4">
+                            <a href="#" className="hover:text-red-200 transition-colors text-lg">Home</a>
+                            <a href="#" className="hover:text-red-200 transition-colors text-lg">Calendar</a>
+                            <a href="#" className="hover:text-red-200 transition-colors text-lg">About us</a>
+                            <a href="#" className="hover:text-red-200 transition-colors text-lg">News</a>
+                            <a href="#" className="hover:text-red-200 transition-colors text-lg">Events</a>
+                            <a href="#" className="hover:text-red-200 transition-colors text-lg">Join us</a>
+                            <a href="#" className="hover:text-red-200 transition-colors text-lg">Buy tickets</a>
+                        </div>
+                        <div className="flex flex-col space-y-4">
+                            <a href="#" className="hover:text-red-200 transition-colors text-lg">Terms & conditions</a>
+                            <a href="#" className="hover:text-red-200 transition-colors text-lg">Payment policy</a>
+                            <a href="#" className="hover:text-red-200 transition-colors text-lg">FAQ</a>
+                        </div>
+                    </div>
+
+                    {/* Copyright for desktop - positioned at bottom center of red section */}
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 hidden md:block">
+                        <p className="text-white text-center">© 2025 Safari sevens. All Rights Reserved.</p>
+                    </div>
+                </div>
+
+                {/* Contact Section - Green */}
+                <div className="bg-green-600 p-8 text-white min-h-[400px] relative">
+                    <div className="space-y-2">
+                        <h4 className="font-bold text-xl mb-4">Mombasa, Kenya</h4>
+                        <p className="text-lg">+254727991993</p>
+                        <p className="text-lg">+254704069264</p>
+                    </div>
+
+                    {/* Copyright for mobile - positioned at bottom center of green section */}
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 md:hidden">
+                        <p className="text-white text-center">© 2025 Safari sevens. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
