@@ -9,7 +9,7 @@ const Experience = () => {
     return (
         <>
             <Navbar />
-
+            <div id="experience" className="min-h-screen bg-black text-white py-12 md:py-20">
             <div className="min-h-screen bg-white flex items-center py-20">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="grid lg:grid-cols-3 gap-12 items-center">
@@ -82,6 +82,7 @@ const Experience = () => {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </>
     );

@@ -29,6 +29,7 @@ const Updates = () => {
     ];
 
     return (
+        <div id="updates" className="min-h-screen bg-black text-white py-12 md:py-20">
         <div className="min-h-screen bg-black text-white py-20">
             <div className="max-w-6xl mx-auto px-4">
                 <div className="flex mb-12 border-b border-gray-700">
@@ -67,6 +68,7 @@ const Updates = () => {
                     ))}
                 </div>
             </div>
+        </div>
         </div>
     );
 };

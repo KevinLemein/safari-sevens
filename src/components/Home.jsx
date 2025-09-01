@@ -1,5 +1,3 @@
-// src/pages/Home.jsx (or wherever your Home.jsx is)
-
 import React, { useState, useEffect } from 'react';
 import backgroundImage from '../images/backgroundimg.jpg';
 
@@ -63,7 +61,7 @@ const Home = () => {
                  backgroundSize: "cover",
                  backgroundRepeat: "no-repeat",
                  backgroundPosition: "center",
-                 imageRendering: "crisp-edges", // try "pixelated" too
+                 imageRendering: "crisp-edges",
              }}>
 
 
@@ -89,41 +87,6 @@ const Home = () => {
                             Buy tickets
                         </button>
                     </div>
-
-                    {/*/!* Red Trapezoid/Block *!/*/}
-                    {/*<div*/}
-                    {/*    className="w-full bg-red-600 flex flex-col justify-center items-center p-8*/}
-                    {/*               lg:absolute lg:top-[60vh] lg:right-0 lg:w-[70%] lg:h-[30vh] z-20"*/}
-                    {/*    style={isDesktop ? { clipPath: 'polygon(25% 0, 100% 0, 100% 100%, 0 100%)' } : {}}*/}
-                    {/*>*/}
-                    {/*    /!* CHANGE 2: Countdown Position Fix*/}
-                    {/*      This new wrapper uses a transform to shift the countdown and button up slightly,*/}
-                    {/*      making them more visible without altering the parent red block's layout.*/}
-                    {/*    *!/*/}
-                    {/*    <div className="flex flex-col items-center transform -translate-y-2 lg:-translate-y-3">*/}
-                    {/*        <div className="grid grid-cols-4 gap-2 sm:gap-4 mb-5">*/}
-                    {/*            <div className="text-center">*/}
-                    {/*                <div className="text-black text-2xl sm:text-3xl lg:text-4xl font-black">{timeLeft.days.toString().padStart(2, '0')}</div>*/}
-                    {/*                <div className="text-white text-xs sm:text-sm uppercase tracking-wider font-black">DAYS</div>*/}
-                    {/*            </div>*/}
-                    {/*            <div className="text-center">*/}
-                    {/*                <div className="text-black text-2xl sm:text-3xl lg:text-4xl font-black">{timeLeft.hours.toString().padStart(2, '0')}</div>*/}
-                    {/*                <div className="text-white text-xs sm:text-sm uppercase tracking-wider font-black">HOURS</div>*/}
-                    {/*            </div>*/}
-                    {/*            <div className="text-center">*/}
-                    {/*                <div className="text-black text-2xl sm:text-3xl lg:text-4xl font-black">{timeLeft.minutes.toString().padStart(2, '0')}</div>*/}
-                    {/*                <div className="text-white text-xs sm:text-sm uppercase tracking-wider font-black">MINS</div>*/}
-                    {/*            </div>*/}
-                    {/*            <div className="text-center">*/}
-                    {/*                <div className="text-black text-2xl sm:text-3xl lg:text-4xl font-black">{timeLeft.seconds.toString().padStart(2, '0')}</div>*/}
-                    {/*                <div className="text-white text-xs sm:text-sm uppercase tracking-wider font-black">SECS</div>*/}
-                    {/*            </div>*/}
-                    {/*        </div>*/}
-                    {/*        <button className="bg-transparent border-2 border-white text-white py-2 sm:py-3 px-6 rounded-full font-semibold hover:bg-white hover:text-red-600 transition-all duration-300 cursor-pointer">*/}
-                    {/*            LOCATION MAP*/}
-                    {/*        </button>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
 
                     {/* Red Trapezoid/Block */}
                     <div className="w-full bg-red-600 flex flex-col justify-center items-center p-8 lg:absolute lg:top-[60vh] lg:right-0 lg:w-[70%] lg:h-[30vh] z-20" style={isDesktop ? { clipPath: 'polygon(25% 0, 100% 0, 100% 100%, 0 100%)' } : {}} >

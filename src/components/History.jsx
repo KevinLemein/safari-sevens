@@ -79,7 +79,7 @@ const History = () => {
     const currentSlideData = historySlides[currentSlide];
 
     return (
-        <div className="min-h-screen bg-black text-white py-12 md:py-20">
+        <div id="history" className="min-h-screen bg-black text-white py-12 md:py-20">
             <div className="max-w-full px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24">
                 {/* Header */}
                 <div className="text-center mb-12 md:mb-16">
