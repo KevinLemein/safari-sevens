@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+/*.clip-black {*/
+/*    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);*/
+/*}*/
+
+/*.clip-red {*/
+/*    clip-path: polygon(0 15%, 100% 5%, 100% 100%, 0% 100%);*/
+/*}*/
+
+/*.clip-green {*/
+/*    clip-path: polygon(0 20%, 100% 10%, 100% 100%, 0% 100%);*/
+/*}*/
+
+
+.clip-black {
+    clip-path: polygon(0 12%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.clip-red {
+    clip-path: polygon(0 17%, 100% 5%, 100% 100%, 0% 100%);
+}
+
+.clip-green {
+    clip-path: polygon(0 22%, 100% 10%, 100% 100%, 0% 100%);
+}
