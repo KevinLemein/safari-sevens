@@ -1,80 +1,148 @@
 import React from 'react';
 // import { ChevronRight } from 'lucide-react';
-// import entertainmentimg from '../images/experience1.jpeg';
-// import womenrugby from '../images/womenrugby.jpeg';
+import entertainmentimg from '../images/experience1.jpeg'; // Assuming you have this image, or uncomment the others
+import womenrugby from '../images/womenrugby.jpeg'; // Assuming you have this image
+import fans1 from '../images/fans1.jpg';
+import fans2 from '../images/fans2.jpg';
 
 import Navbar from '../layouts/Navbar';
+
+// Inline font styles - you can adjust paths as needed
+const fontStyles = `
+@font-face {
+    font-family: 'Clash Display';
+    src: url('./fonts/ClashDisplay-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akira Expanded';
+    src: url('./fonts/AkiraExpanded-SuperBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LemonMilk';
+    src: url('./fonts/LemonMilk-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+`;
 
 const Experience = () => {
     return (
         <>
+            {/* Inject font styles */}
+            <style>{fontStyles}</style>
+
             <Navbar />
             <div id="experience" className="min-h-screen bg-black text-white py-12 md:py-20">
-            <div className="min-h-screen bg-white flex items-center py-20">
-                <div className="max-w-7xl mx-auto px-4">
-                    <div className="grid lg:grid-cols-3 gap-12 items-center">
-                        {/* Left side - Text content */}
-                        <div className="lg:col-span-1">
-                            <h1 className="text-5xl lg:text-6xl font-black text-black mb-8 leading-tight">
-                                EXPERIENCE<br />
-                                KENYA<br />
-                                <span className="text-black">SAFARI</span><br />
-                                <span className="text-red-500">SEVENS</span>
-                            </h1>
+                <div className="min-h-screen bg-white flex items-center py-20">
+                    <div className="max-w-7xl mx-auto px-4">
+                        <div className="grid lg:grid-cols-3 gap-12 items-center">
+                            {/* Left side - Text content */}
+                            <div className="lg:col-span-1">
+                                <h1 className="mb-8 leading-tight">
+                                    {/* EXPERIENCE - Clash Display, Medium, 45px, Weight 500 */}
+                                    <span
+                                        className="block text-black"
+                                        style={{
+                                            fontFamily: 'Clash Display, sans-serif',
+                                            fontSize: '45px',
+                                            fontWeight: 500,
+                                            fontStyle: 'medium'
+                                        }}
+                                    >
+                                        EXPERIENCE
+                                    </span>
 
-                            <div className="space-y-6 text-black">
-                                <p className="text-lg font-semibold">
-                                    THE BIGGEST SPORTS AND ENTERTAINMENT FESTIVAL IN{' '}
-                                    <span className="text-red-500">KENYA</span> IS BACK FOR 2025.
-                                </p>
+                                    {/* KENYA SAFARI SEVENS - Akira Expanded, Super Bold, 64px, Weight 800 */}
+                                    <span
+                                        className="block"
+                                        style={{
+                                            fontFamily: 'Akira Expanded, sans-serif',
+                                            fontSize: '64px',
+                                            fontWeight: 800,
+                                            fontStyle: 'Super Bold'
+                                        }}
+                                    >
+                                        <span className="text-black">KENYA<br />SAFARI<br /></span>
+                                        <span className="text-red-500">SEVENS</span>
+                                    </span>
+                                </h1>
 
-                                <p className="text-base leading-relaxed">
-                                    FROM THE CROWDS SINGING ON PITCHES TO THE PERFORMANCES FROM OUR LOCAL DJS AND
-                                    ARTISTS, THERE IS SOMETHING FOR EVERYONE AT{' '}
-                                    <span className="text-green-500 font-semibold">KENYA SAFARI SEVENS</span>.
-                                </p>
-                            </div>
-                        </div>
+                                <div className="space-y-6 text-black">
+                                    {/* THE BIGGEST SPORTS... - LemonMilk, Regular, 20px, Weight 400 */}
+                                    <p
+                                        style={{
+                                            fontFamily: 'LemonMilk, sans-serif',
+                                            fontSize: '20px',
+                                            fontWeight: 400,
+                                            fontStyle: 'Regular'
+                                        }}
+                                    >
+                                        THE BIGGEST SPORTS AND ENTERTAINMENT FESTIVAL IN{' '}
+                                        <span className="text-red-500">KENYA</span> IS BACK FOR 2025.
+                                    </p>
 
-                        {/* Right side - Photo grid */}
-                        <div className="lg:col-span-2 grid md:grid-cols-2 gap-6">
-                            {/* Entertainment Card */}
-                            <div className="relative group cursor-pointer">
-                                <div className="aspect-[4/3] bg-gradient-to-br from-red-500 to-red-600 rounded-lg overflow-hidden shadow-lg">
-                                    <div className="w-full h-full bg-red-500 relative">
-                                        <div className="absolute inset-0 flex items-center justify-center">
-                                            <div className="text-center text-white">
-                                                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                                    {/* I've replaced the emoji with a clearer music note icon for better consistency */}
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                                        <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                            <h3 className="text-2xl font-bold mb-2">ENTERTAINMENT</h3>
-                                            <p className="text-sm opacity-90">Live music, performances, and festivities</p>
-                                        </div>
-                                    </div>
+                                    {/* FROM THE CROWDS... - LemonMilk, Regular, Weight 400, Line Height 100% */}
+                                    <p
+                                        style={{
+                                            fontFamily: 'LemonMilk, sans-serif',
+                                            fontWeight: 400,
+                                            fontStyle: 'Regular',
+                                            lineHeight: '100%'
+                                        }}
+                                    >
+                                        FROM THE CROWDS SINGING ON PITCHES TO THE PERFORMANCES FROM OUR LOCAL DJS AND
+                                        ARTISTS, THERE IS SOMETHING FOR EVERYONE AT{' '}
+                                        <span className="text-green-500 font-semibold">KENYA SAFARI SEVENS</span>.
+                                    </p>
                                 </div>
                             </div>
 
-                            {/* World Class Sport Card */}
-                            <div className="relative group cursor-pointer">
-                                <div className="aspect-[4/3] bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg overflow-hidden shadow-lg">
-                                    <div className="w-full h-full bg-blue-500 relative">
-                                        <div className="absolute inset-0 flex items-center justify-center">
-                                            <div className="text-center text-white">
-                                                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                                    {/* I've replaced the emoji with a rugby ball icon */}
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 2.003c-5.523 0-10 4.477-10 10s4.477 10 10 10c5.522 0 10-4.477 10-10s-4.478-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8c4.41 0 8 3.59 8 8s-3.59 8-8 8zm-2.4-11.402c-.295-.119-.638-.043-.865.183l-1.5 1.5c-.29.29-.29.768 0 1.058l1.5 1.5c.227.226.57.302.865.183.296-.119.5-.41.5-.733v-3c0-.323-.204-.614-.5-.733zm4.8 0c-.295-.119-.638-.043-.865.183l-1.5 1.5c-.29.29-.29.768 0 1.058l1.5 1.5c.227.226.57.302.865.183.296-.119.5-.41.5-.733v-3c0-.323-.204-.614-.5-.733z" /></svg>
-                                                </div>
+                            {/* Right side - Photo grid */}
+                            <div className="lg:col-span-2 grid md:grid-cols-2 gap-6">
+                                {/* Entertainment Card - Using fans1 image */}
+                                <div className="relative group cursor-pointer">
+                                    <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+                                        {/* Image element added here: */}
+                                        <img
+                                            src={fans1}
+                                            alt="Entertainment"
+                                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        />
+                                        {/* Overlay for text and gradient - Changed the parent div to be absolute and higher Z-index */}
+                                        <div className="absolute inset-0 z-10">
+                                            {/* Removed the original background color and icon logic */}
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                                <h3 className="text-2xl font-bold mb-2">ENTERTAINMENT</h3>
+                                                <p className="text-sm opacity-90">Live music, performances, and festivities</p>
                                             </div>
                                         </div>
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                                        <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                            <h3 className="text-2xl font-bold mb-2">WORLD CLASS SPORT</h3>
-                                            <p className="text-sm opacity-90">International rugby teams competing at the highest level</p>
+                                    </div>
+                                </div>
+
+                                {/* World Class Sport Card - Using fans2 image */}
+                                <div className="relative group cursor-pointer">
+                                    <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+                                        {/* Image element added here: */}
+                                        <img
+                                            src={fans2}
+                                            alt="World Class Sport"
+                                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        />
+                                        {/* Overlay for text and gradient - Changed the parent div to be absolute and higher Z-index */}
+                                        <div className="absolute inset-0 z-10">
+                                            {/* Removed the original background color and icon logic */}
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                                <h3 className="text-2xl font-bold mb-2">WORLD CLASS SPORT</h3>
+                                                <p className="text-sm opacity-90">International rugby teams competing at the highest level</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -82,7 +150,6 @@ const Experience = () => {
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
         </>
     );

@@ -51,80 +51,184 @@ const Home = () => {
     };
 
     return (
-        <div className="min-h-screen relative bg-cover bg-center bg-no-repeat"
-             // style={{
-             //     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${backgroundImage})`
-             // }}>
+        <>
+            {/* Add Google Fonts */}
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+            <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css2?family=Akira+Expanded:wght@800&display=swap" rel="stylesheet" />
 
-             style={{
-                 backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(${backgroundImage})`,
-                 backgroundSize: "cover",
-                 backgroundRepeat: "no-repeat",
-                 backgroundPosition: "center",
-                 imageRendering: "crisp-edges",
-             }}>
+            <div className="min-h-screen relative bg-white"
+                 style={{
+                     backgroundImage: `url(${backgroundImage})`,
+                     backgroundSize: "cover",
+                     backgroundRepeat: "no-repeat",
+                     backgroundPosition: "center",
+                     backgroundAttachment: isDesktop ? "fixed" : "scroll",
+                 }}>
 
+                <main className="relative min-h-screen">
+                    <div className="absolute bottom-0 w-full lg:static">
 
-        <main className="relative min-h-screen">
-
-                <div className="absolute bottom-0 w-full lg:static">
-                    {/* Black Trapezoid/Block */}
-                    <div
-                        className="w-full bg-black bg-opacity-90 flex flex-col justify-center items-start p-8 sm:p-12
-                                   lg:absolute lg:top-[60vh] lg:left-0 lg:w-[60%] lg:h-[40vh] lg:pl-24 z-10"
-                        style={isDesktop ? { clipPath: 'polygon(0 0, 100% 0, 75% 100%, 0% 100%)' } : {}}
-                    >
-                        <h1 className="text-red-500 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight">
-                            Kenya Safari 7s
-                        </h1>
-                        <p className="text-white text-base sm:text-lg lg:text-xl mb-6 opacity-90">
-                            10th - 12th October 2025 • Nyayo Stadium
-                        </p>
-                        <button
-                            onClick={handleBuyTickets}
-                            className="bg-transparent border-2 border-white text-white px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg rounded-full hover:bg-red-600 hover:border-red-600 transition-all duration-300 font-medium cursor-pointer"
+                        {/* Black Trapezoid/Block */}
+                        <div
+                            className="w-full bg-black bg-opacity-90 flex flex-col justify-center items-start p-8 sm:p-12
+                                       lg:absolute lg:top-[60vh] lg:left-0 lg:w-[60%] lg:h-[40vh] lg:pl-24 z-10"
+                            style={isDesktop ? { clipPath: 'polygon(0 0, 100% 0, 75% 100%, 0% 100%)' } : {}}
                         >
-                            Buy tickets
-                        </button>
-                    </div>
-
-                    {/* Red Trapezoid/Block */}
-                    <div className="w-full bg-red-600 flex flex-col justify-center items-center p-8 lg:absolute lg:top-[60vh] lg:right-0 lg:w-[70%] lg:h-[30vh] z-20" style={isDesktop ? { clipPath: 'polygon(25% 0, 100% 0, 100% 100%, 0 100%)' } : {}} >
-
-                        <div className="flex flex-col items-center transform -translate-y-4 lg:-translate-y-6">
-                            <div className="grid grid-cols-4 gap-2 sm:gap-4 mb-5">
-                                <div className="text-center">
-                                    <div className="text-black text-2xl sm:text-3xl lg:text-4xl font-black">{timeLeft.days.toString().padStart(2, '0')}</div>
-                                    <div className="text-white text-xs sm:text-sm uppercase tracking-wider font-black">DAYS</div>
-                                </div>
-                                <div className="text-center">
-                                    <div className="text-black text-2xl sm:text-3xl lg:text-4xl font-black">{timeLeft.hours.toString().padStart(2, '0')}</div>
-                                    <div className="text-white text-xs sm:text-sm uppercase tracking-wider font-black">HOURS</div>
-                                </div>
-                                <div className="text-center">
-                                    <div className="text-black text-2xl sm:text-3xl lg:text-4xl font-black">{timeLeft.minutes.toString().padStart(2, '0')}</div>
-                                    <div className="text-white text-xs sm:text-sm uppercase tracking-wider font-black">MINS</div>
-                                </div>
-                                <div className="text-center">
-                                    <div className="text-black text-2xl sm:text-3xl lg:text-4xl font-black">{timeLeft.seconds.toString().padStart(2, '0')}</div>
-                                    <div className="text-white text-xs sm:text-sm uppercase tracking-wider font-black">SECS</div>
-                                </div>
-                            </div>
-                            <button className="bg-transparent border-2 border-white text-white py-2 sm:py-3 px-6 rounded-full font-semibold hover:bg-white hover:text-red-600 transition-all duration-300 cursor-pointer">
-                                LOCATION MAP
+                            <h1
+                                className="mb-3 leading-none"
+                                style={{
+                                    fontFamily: "'Baguede Free', serif",
+                                    fontWeight: 400,
+                                    fontSize: isDesktop ? '64px' : width >= 640 ? '48px' : '36px',
+                                    lineHeight: '100%',
+                                    color: '#D71F27',
+                                    letterSpacing: '0%'
+                                }}
+                            >
+                                Kenya Safari 7s
+                            </h1>
+                            <p
+                                className="text-white mb-6 opacity-90"
+                                style={{
+                                    fontFamily: "'Clash Display', sans-serif",
+                                    fontSize: isDesktop ? '20px' : width >= 640 ? '18px' : '16px',
+                                }}
+                            >
+                                10th - 12th October 2025 • Nyayo Stadium
+                            </p>
+                            <button
+                                onClick={handleBuyTickets}
+                                className="bg-transparent border-2 border-white text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full hover:bg-red-600 hover:border-red-600 transition-all duration-300 font-medium cursor-pointer"
+                                style={{
+                                    fontFamily: "'Clash Display', sans-serif",
+                                    fontSize: isDesktop ? '18px' : '16px',
+                                }}
+                            >
+                                Buy tickets
                             </button>
                         </div>
-                    </div>
 
-                    {/* Green Trapezoid/Block */}
-                    <div
-                        className="w-full h-[10vh] bg-green-600
-                                   lg:absolute lg:bottom-0 lg:right-0 lg:w-[70%] lg:h-[20vh] z-20"
-                        style={isDesktop ? { clipPath: 'polygon(25% 0, 100% 0, 100% 100%, 0 100%)' } : {}}
-                    ></div>
-                </div>
-            </main>
-        </div>
+                        {/* Red Trapezoid/Block */}
+                        <div
+                            className="w-full flex flex-col justify-center items-center p-8 lg:absolute lg:top-[60vh] lg:right-0 lg:w-[70%] lg:h-[30vh] z-20"
+                            style={{
+                                backgroundColor: '#D71F27',
+                                clipPath: isDesktop ? 'polygon(25% 0, 100% 0, 100% 100%, 0 100%)' : 'none'
+                            }}
+                        >
+                            <div className="flex flex-col items-center transform -translate-y-4 lg:-translate-y-6">
+                                <div className="grid grid-cols-4 gap-2 sm:gap-4 mb-5">
+                                    <div className="text-center">
+                                        <div
+                                            className="text-white"
+                                            style={{
+                                                fontFamily: "'Akira Expanded', sans-serif",
+                                                fontWeight: 800,
+                                                fontSize: isDesktop ? '60px' : width >= 640 ? '36px' : '24px',
+                                                lineHeight: '100%'
+                                            }}
+                                        >
+                                            {timeLeft.days.toString().padStart(2, '0')}
+                                        </div>
+                                        <div
+                                            className="text-white uppercase tracking-wider"
+                                            style={{
+                                                fontFamily: "'Clash Display', sans-serif",
+                                                fontWeight: 700,
+                                                fontSize: isDesktop ? '14px' : '12px'
+                                            }}
+                                        >
+                                            DAYS
+                                        </div>
+                                    </div>
+                                    <div className="text-center">
+                                        <div
+                                            className="text-white"
+                                            style={{
+                                                fontFamily: "'Akira Expanded', sans-serif",
+                                                fontWeight: 800,
+                                                fontSize: isDesktop ? '60px' : width >= 640 ? '36px' : '24px',
+                                                lineHeight: '100%'
+                                            }}
+                                        >
+                                            {timeLeft.hours.toString().padStart(2, '0')}
+                                        </div>
+                                        <div
+                                            className="text-white uppercase tracking-wider"
+                                            style={{
+                                                fontFamily: "'Clash Display', sans-serif",
+                                                fontWeight: 700,
+                                                fontSize: isDesktop ? '14px' : '12px'
+                                            }}
+                                        >
+                                            HOURS
+                                        </div>
+                                    </div>
+                                    <div className="text-center">
+                                        <div
+                                            className="text-white"
+                                            style={{
+                                                fontFamily: "'Akira Expanded', sans-serif",
+                                                fontWeight: 800,
+                                                fontSize: isDesktop ? '60px' : width >= 640 ? '36px' : '24px',
+                                                lineHeight: '100%'
+                                            }}
+                                        >
+                                            {timeLeft.minutes.toString().padStart(2, '0')}
+                                        </div>
+                                        <div
+                                            className="text-white uppercase tracking-wider"
+                                            style={{
+                                                fontFamily: "'Clash Display', sans-serif",
+                                                fontWeight: 700,
+                                                fontSize: isDesktop ? '14px' : '12px'
+                                            }}
+                                        >
+                                            MINS
+                                        </div>
+                                    </div>
+                                    <div className="text-center">
+                                        <div
+                                            className="text-white"
+                                            style={{
+                                                fontFamily: "'Akira Expanded', sans-serif",
+                                                fontWeight: 800,
+                                                fontSize: isDesktop ? '60px' : width >= 640 ? '36px' : '24px',
+                                                lineHeight: '100%'
+                                            }}
+                                        >
+                                            {timeLeft.seconds.toString().padStart(2, '0')}
+                                        </div>
+                                        <div
+                                            className="text-white uppercase tracking-wider"
+                                            style={{
+                                                fontFamily: "'Clash Display', sans-serif",
+                                                fontWeight: 700,
+                                                fontSize: isDesktop ? '14px' : '12px'
+                                            }}
+                                        >
+                                            SECS
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        {/* Green Trapezoid/Block */}
+                        <div
+                            className="w-full h-[10vh] lg:absolute lg:bottom-0 lg:right-0 lg:w-[70%] lg:h-[20vh] z-20"
+                            style={{
+                                backgroundColor: '#7BC24A',
+                                clipPath: isDesktop ? 'polygon(25% 0, 100% 0, 100% 100%, 0 100%)' : 'none'
+                            }}
+                        ></div>
+                    </div>
+                </main>
+            </div>
+        </>
     );
 };
 

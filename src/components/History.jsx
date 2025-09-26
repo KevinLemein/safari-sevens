@@ -1,8 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import history1 from '../images/history1.jpg';
+import history2 from '../images/history2.jpg';
+import history3 from '../images/history3.jpg';
+import history4 from '../images/history4.jpg';
+import history5 from '../images/history5.jpg';
+import history6 from '../images/history6.jpg';
+import history7 from '../images/history7.jpg';
 
 const History = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
+
+    const historyImages = [
+        history1, // Corresponds to slide 0 (1996)
+        history2, // Corresponds to slide 1 (2001-2009)
+        history3, // Corresponds to slide 2 (2010-2011)
+        history4, // Corresponds to slide 3 (2012-2017)
+        history5, // Corresponds to slide 4 (2016)
+        history6, // Corresponds to slide 5 (2024)
+        history7  // Corresponds to slide 6 (2025)
+    ];
 
     const historySlides = [
         {
@@ -94,7 +111,7 @@ const History = () => {
                     <div className="relative overflow-hidden rounded-2xl">
                         <div className="relative">
                             {/* Image Container */}
-                            <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px] w-full">
+                            <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px] w-full bg-gray-900"> {/* Added dark background for object-contain padding */}
                                 {historySlides.map((slide, index) => (
                                     <div
                                         key={slide.id}
@@ -102,28 +119,17 @@ const History = () => {
                                             index === currentSlide ? 'opacity-100' : 'opacity-0'
                                         }`}
                                     >
-                                        {/* Placeholder for actual images - replace with your images */}
-                                        <div className="w-full h-full bg-gradient-to-br from-red-600 via-red-700 to-red-800 flex items-center justify-center relative">
-                                            {/* Replace this div with: <img src={`/images/safari-sevens-${slide.year}.jpg`} alt={slide.title} className="w-full h-full object-cover" /> */}
-                                            <div className="text-center text-white">
-                                                <div className="w-20 h-20 md:w-32 md:h-32 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
-                                                    <span className="text-3xl md:text-5xl">
-                                                        {index === 0 && '🏉'}
-                                                        {index === 1 && '🌍'}
-                                                        {index === 2 && '🏟️'}
-                                                        {index === 3 && '👥'}
-                                                        {index === 4 && '🏆'}
-                                                        {index === 5 && '📍'}
-                                                        {index === 6 && '🚀'}
-                                                    </span>
-                                                </div>
-                                                <p className="text-lg md:text-xl font-semibold mb-2">{slide.year}</p>
-                                                <p className="text-sm md:text-base opacity-75">Replace with your historical image</p>
-                                            </div>
+                                        <img
+                                            src={historyImages[index]}
+                                            alt={slide.title}
+                                            // 🌟 KEY CHANGE: Changed object-cover to object-contain
+                                            className="w-full h-full object-contain"
+                                        />
 
-                                            {/* Gradient overlay for better text readability */}
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                                        </div>
+                                        {/* Gradient overlay for better text readability - positioned only at the bottom */}
+                                        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+                                        {/* Emojis removed from the center of the image. The content is now only the gradient and the text below the carousel. */}
                                     </div>
                                 ))}
                             </div>
@@ -131,14 +137,14 @@ const History = () => {
                             {/* Navigation Arrows */}
                             <button
                                 onClick={prevSlide}
-                                className="absolute left-4 md:left-6 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 md:p-4 rounded-full transition-all duration-300 backdrop-blur-sm z-10"
+                                className="absolute left-4 md:left-6 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 md:p-4 rounded-full transition-all duration-300 backdrop-blur-sm z-20"
                                 aria-label="Previous slide"
                             >
                                 <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
                             </button>
                             <button
                                 onClick={nextSlide}
-                                className="absolute right-4 md:right-6 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 md:p-4 rounded-full transition-all duration-300 backdrop-blur-sm z-10"
+                                className="absolute right-4 md:right-6 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 md:p-4 rounded-full transition-all duration-300 backdrop-blur-sm z-20"
                                 aria-label="Next slide"
                             >
                                 <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
