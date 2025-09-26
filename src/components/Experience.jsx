@@ -31,6 +31,24 @@ const fontStyles = `
 }
 `;
 
+// Define the styles based on your text content for easy reuse
+const titleStyle = {
+    fontFamily: 'LemonMilk, sans-serif',
+    fontSize: '24px', // Increased size slightly for card titles
+    fontWeight: 400,
+    fontStyle: 'Regular',
+    color: '#000000' // Black text
+};
+
+const descriptionStyle = {
+    fontFamily: 'LemonMilk, sans-serif',
+    fontSize: '16px', // Adjusted size for description
+    fontWeight: 400,
+    fontStyle: 'Regular',
+    color: '#000000',
+    lineHeight: '130%' // Adjusted line height for readability
+};
+
 const Experience = () => {
     return (
         <>
@@ -105,47 +123,53 @@ const Experience = () => {
 
                             {/* Right side - Photo grid */}
                             <div className="lg:col-span-2 grid md:grid-cols-2 gap-6">
-                                {/* Entertainment Card - Using fans1 image */}
-                                <div className="relative group cursor-pointer">
-                                    <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
-                                        {/* Image element added here: */}
-                                        <img
-                                            src={fans1}
-                                            alt="Entertainment"
-                                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                        />
-                                        {/* Overlay for text and gradient - Changed the parent div to be absolute and higher Z-index */}
-                                        <div className="absolute inset-0 z-10">
-                                            {/* Removed the original background color and icon logic */}
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                                <h3 className="text-2xl font-bold mb-2">ENTERTAINMENT</h3>
-                                                <p className="text-sm opacity-90">Live music, performances, and festivities</p>
-                                            </div>
+
+                                {/* Entertainment Card Container (Image + Text) */}
+                                <div className="group cursor-pointer">
+                                    {/* Image */}
+                                    <div className="relative rounded-lg overflow-hidden shadow-xl">
+                                        <div className="aspect-[4/3]">
+                                            <img
+                                                src={fans1}
+                                                alt="Entertainment"
+                                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                            />
                                         </div>
+                                    </div>
+                                    {/* Text Content Below Image */}
+                                    <div className="mt-4 p-0">
+                                        <h3 className="uppercase mb-1" style={titleStyle}>
+                                            ENTERTAINMENT
+                                        </h3>
+                                        <p style={descriptionStyle}>
+                                            Live music, performances, and festivities
+                                        </p>
                                     </div>
                                 </div>
 
-                                {/* World Class Sport Card - Using fans2 image */}
-                                <div className="relative group cursor-pointer">
-                                    <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
-                                        {/* Image element added here: */}
-                                        <img
-                                            src={fans2}
-                                            alt="World Class Sport"
-                                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                        />
-                                        {/* Overlay for text and gradient - Changed the parent div to be absolute and higher Z-index */}
-                                        <div className="absolute inset-0 z-10">
-                                            {/* Removed the original background color and icon logic */}
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                                <h3 className="text-2xl font-bold mb-2">WORLD CLASS SPORT</h3>
-                                                <p className="text-sm opacity-90">International rugby teams competing at the highest level</p>
-                                            </div>
+                                {/* World Class Sport Card Container (Image + Text) */}
+                                <div className="group cursor-pointer">
+                                    {/* Image */}
+                                    <div className="relative rounded-lg overflow-hidden shadow-xl">
+                                        <div className="aspect-[4/3]">
+                                            <img
+                                                src={fans2}
+                                                alt="World Class Sport"
+                                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                            />
                                         </div>
                                     </div>
+                                    {/* Text Content Below Image */}
+                                    <div className="mt-4 p-0">
+                                        <h3 className="uppercase mb-1" style={titleStyle}>
+                                            WORLD CLASS SPORT
+                                        </h3>
+                                        <p style={descriptionStyle}>
+                                            International rugby teams competing at the highest level
+                                        </p>
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>

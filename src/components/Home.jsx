@@ -73,8 +73,8 @@ const Home = () => {
                         {/* Black Trapezoid/Block */}
                         <div
                             className="w-full bg-black bg-opacity-90 flex flex-col justify-center items-start p-8 sm:p-12
-                                       lg:absolute lg:top-[60vh] lg:left-0 lg:w-[60%] lg:h-[40vh] lg:pl-24 z-10"
-                            style={isDesktop ? { clipPath: 'polygon(0 0, 100% 0, 75% 100%, 0% 100%)' } : {}}
+                                       lg:absolute lg:top-[55vh] lg:left-0 lg:w-full lg:h-[45vh] lg:pl-24 z-10"
+                            style={isDesktop ? { clipPath: 'polygon(0 0, 75% 0, 60% 100%, 0% 100%)' } : {}}
                         >
                             <h1
                                 className="mb-3 leading-none"
@@ -119,10 +119,10 @@ const Home = () => {
                             }}
                         >
                             <div className="flex flex-col items-center transform -translate-y-4 lg:-translate-y-6">
-                                <div className="grid grid-cols-4 gap-2 sm:gap-4 mb-5">
+                                <div className="flex items-center gap-2 sm:gap-4 mb-5">
                                     <div className="text-center">
                                         <div
-                                            className="text-white"
+                                            className="text-black"
                                             style={{
                                                 fontFamily: "'Akira Expanded', sans-serif",
                                                 fontWeight: 800,
@@ -143,9 +143,22 @@ const Home = () => {
                                             DAYS
                                         </div>
                                     </div>
+
+                                    <div
+                                        className="text-black mb-6"
+                                        style={{
+                                            fontFamily: "'Akira Expanded', sans-serif",
+                                            fontWeight: 800,
+                                            fontSize: isDesktop ? '60px' : width >= 640 ? '36px' : '24px',
+                                            lineHeight: '100%'
+                                        }}
+                                    >
+                                        :
+                                    </div>
+
                                     <div className="text-center">
                                         <div
-                                            className="text-white"
+                                            className="text-black"
                                             style={{
                                                 fontFamily: "'Akira Expanded', sans-serif",
                                                 fontWeight: 800,
@@ -166,9 +179,22 @@ const Home = () => {
                                             HOURS
                                         </div>
                                     </div>
+
+                                    <div
+                                        className="text-black mb-6"
+                                        style={{
+                                            fontFamily: "'Akira Expanded', sans-serif",
+                                            fontWeight: 800,
+                                            fontSize: isDesktop ? '60px' : width >= 640 ? '36px' : '24px',
+                                            lineHeight: '100%'
+                                        }}
+                                    >
+                                        :
+                                    </div>
+
                                     <div className="text-center">
                                         <div
-                                            className="text-white"
+                                            className="text-black"
                                             style={{
                                                 fontFamily: "'Akira Expanded', sans-serif",
                                                 fontWeight: 800,
@@ -189,9 +215,22 @@ const Home = () => {
                                             MINS
                                         </div>
                                     </div>
+
+                                    <div
+                                        className="text-black mb-6"
+                                        style={{
+                                            fontFamily: "'Akira Expanded', sans-serif",
+                                            fontWeight: 800,
+                                            fontSize: isDesktop ? '60px' : width >= 640 ? '36px' : '24px',
+                                            lineHeight: '100%'
+                                        }}
+                                    >
+                                        :
+                                    </div>
+
                                     <div className="text-center">
                                         <div
-                                            className="text-white"
+                                            className="text-black"
                                             style={{
                                                 fontFamily: "'Akira Expanded', sans-serif",
                                                 fontWeight: 800,
@@ -219,7 +258,7 @@ const Home = () => {
 
                         {/* Green Trapezoid/Block */}
                         <div
-                            className="w-full h-[10vh] lg:absolute lg:bottom-0 lg:right-0 lg:w-[70%] lg:h-[20vh] z-20"
+                            className="w-full h-[10vh] lg:absolute lg:top-[80vh] lg:right-0 lg:w-[70%] lg:h-[20vh] z-15"
                             style={{
                                 backgroundColor: '#7BC24A',
                                 clipPath: isDesktop ? 'polygon(25% 0, 100% 0, 100% 100%, 0 100%)' : 'none'

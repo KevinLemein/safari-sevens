@@ -18,18 +18,14 @@ function App() {
                 <Routes>
                     <Route path="/" element={
                         <>
-                            <Home />
-                            <History />
-                            <Fixtures />
-                            <Experience />
-                            <Updates />
-                            <Footer />
+                        <div id="home"><Home /></div>
+                        <div id="history"><History /></div>
+                        <div id="fixtures"><Fixtures /></div>
+                        <div id="experience"><Experience /></div>
+                        <div id="updates"><Updates /></div>
+                        <Footer />
                         </>
-                    } />
-                    <Route path="/history" element={<History />} />
-                    <Route path="/fixtures" element={<Fixtures />} />
-                    <Route path="/experience" element={<Experience />} />
-                    <Route path="/updates" element={<Updates />} />
+                    }/>
                 </Routes>
             </div>
         </Router>

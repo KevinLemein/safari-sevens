@@ -111,10 +111,10 @@ const Footer = () => {
                 {/* Links Section - Red */}
                 <div className="bg-red-600 pt-24 px-8 pb-8 text-black min-h-[500px] relative clip-red">
                     <div className="flex flex-col items-center space-y-6 mb-16">
-                        <a href="/home" className="hover:text-red-200 transition-colors text-lg font-medium">Home</a>
-                        <a href="/history" className="hover:text-red-200 transition-colors text-lg font-medium">History</a>
-                        <a href="/experience" className="hover:text-red-200 transition-colors text-lg font-medium">Experience</a>
-                        <a href="/updates" className="hover:text-red-200 transition-colors text-lg font-medium">Updates</a>
+                        <a href="#home" className="hover:text-red-200 transition-colors text-lg font-medium">Home</a>
+                        <a href="#history" className="hover:text-red-200 transition-colors text-lg font-medium">History</a>
+                        <a href="#experience" className="hover:text-red-200 transition-colors text-lg font-medium">Experience</a>
+                        <a href="#updates" className="hover:text-red-200 transition-colors text-lg font-medium">Updates</a>
                         <a
                             href="https://tikohub.com/events/325"
                             target="_blank"
@@ -135,7 +135,6 @@ const Footer = () => {
                 <div className="bg-green-600 pt-32 px-8 pb-8 text-black min-h-[500px] relative clip-green">
                     <div className="space-y-2">
                         <h4 className="font-bold text-xl mb-4">Mombasa, Kenya</h4>
-                        <p className="text-lg">+254727991993</p>
                         <p className="text-lg">+254704069264</p>
                     </div>
 
