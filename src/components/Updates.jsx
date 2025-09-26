@@ -5,7 +5,7 @@ const Updates = () => {
     const news = [
         {
             title: "SAFARI SEVENS 2025 RETURNS TO NAIROBI",
-            date: "SEPTEMBER 26, 2025 — 12:00 PM",
+            date: "SEPTEMBER 23, 2025 — 12:00 PM",
             excerpt: "The 27th edition of Africa's premier rugby sevens tournament confirmed for October 10-12 at Nyayo National Stadium. Mark your calendars for the biggest rugby celebration of the year!",
             tag: "Tournament Announcement",
             image: update1,
@@ -79,7 +79,14 @@ const Updates = () => {
                                         <p className="text-gray-300 leading-relaxed">{item.excerpt}</p>
                                         {index === 0 && (
                                             <div className="mt-4">
-                                                <span className="text-red-500 text-sm font-semibold">[GET TICKETS NOW]</span>
+                                                <a
+                                                    href="https://tikohub/events/325"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-red-500 text-sm font-semibold hover:underline"
+                                                >
+                                                    [GET TICKETS NOW]
+                                                </a>
                                             </div>
                                         )}
                                         {index === 1 && (

@@ -21,6 +21,11 @@ const XIcon = () => (
 );
 
 const Footer = () => {
+    const handleHomeClick = (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
         <footer className="bg-white">
             {/* Sponsors Section */}
@@ -47,7 +52,7 @@ const Footer = () => {
                             <img src={umbro} alt="Umbro" className="h-full w-auto object-contain" />
                         </div>
 
-                        {/* 5. SportPesa (Kept as text since no image was imported for it) */}
+                        {/* 5. SportPesa */}
                         <div className="h-16 flex items-center justify-center">
                             <img src={sportpesa} alt="Sportpesa" className="h-full w-auto object-contain" />
                         </div>
@@ -71,7 +76,6 @@ const Footer = () => {
                 <div className="bg-black p-8 flex flex-col items-center justify-center min-h-[500px] clip-black">
                     <div className="mb-8">
                         <div className="flex items-center justify-center mb-6">
-                            {/* Removed red circle background */}
                             <div className="w-20 h-20 flex items-center justify-center">
                                 <img src={safarisevens} alt="Safarisevens" className="h-full w-auto object-contain" />
                             </div>
@@ -84,23 +88,18 @@ const Footer = () => {
                     </div>
 
                     <div className="flex space-x-4">
-                        {/* Instagram with brand color hover */}
-                        <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-600 hover:via-pink-500 hover:to-orange-400 transition-all duration-300 group">
+                        {/* Instagram with white background and brand color hover */}
+                        <a href="https://www.instagram.com/officialkru/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-600 hover:via-pink-500 hover:to-orange-400 transition-all duration-300 group">
                             <Instagram className="w-6 h-6 text-black group-hover:text-white transition-colors duration-300" />
                         </a>
 
-                        {/* Facebook with brand color hover */}
-                        <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-blue-600 transition-all duration-300 group">
+                        {/* Facebook with white background and blue hover */}
+                        <a href="https://web.facebook.com/officialKRU" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-blue-600 transition-all duration-300 group">
                             <Facebook className="w-6 h-6 text-black group-hover:text-white transition-colors duration-300" />
                         </a>
 
-                        {/* LinkedIn with brand color hover */}
-                        <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-all duration-300 group">
-                            <Linkedin className="w-6 h-6 text-black group-hover:text-white transition-colors duration-300" />
-                        </a>
-
-                        {/* X/Twitter with brand color hover */}
-                        <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-black transition-all duration-300 group">
+                        {/* X/Twitter with white background and brand color hover */}
+                        <a href="https://x.com/officialkru" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-black transition-all duration-300 group">
                             <div className="text-black group-hover:text-white transition-colors duration-300">
                                 <XIcon />
                             </div>
@@ -111,7 +110,7 @@ const Footer = () => {
                 {/* Links Section - Red */}
                 <div className="bg-red-600 pt-24 px-8 pb-8 text-black min-h-[500px] relative clip-red">
                     <div className="flex flex-col items-center space-y-6 mb-16">
-                        <a href="#home" className="hover:text-red-200 transition-colors text-lg font-medium">Home</a>
+                        <a href="#home" onClick={handleHomeClick} className="hover:text-red-200 transition-colors text-lg font-medium">Home</a>
                         <a href="#history" className="hover:text-red-200 transition-colors text-lg font-medium">History</a>
                         <a href="#experience" className="hover:text-red-200 transition-colors text-lg font-medium">Experience</a>
                         <a href="#updates" className="hover:text-red-200 transition-colors text-lg font-medium">Updates</a>

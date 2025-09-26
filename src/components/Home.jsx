@@ -21,7 +21,7 @@ const useWindowSize = () => {
 
 const Home = () => {
     const { width } = useWindowSize();
-    const isDesktop = width >= 1024; // Tailwind's 'lg' breakpoint
+    const isDesktop = width >= 1024;
 
     const [timeLeft, setTimeLeft] = useState({
         days: 0, hours: 0, minutes: 0, seconds: 0
